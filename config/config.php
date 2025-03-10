@@ -19,14 +19,21 @@ define("BASE_PATH", $cwd);
 define("MEDIA_PATH", $cwd . "/");
 
 // SQLite db path
-const SQLITE_DB = BASE_PATH . '/app/db/ultimateDb.db';
+const SQLITE_DB_PATH = '../app/db/ultimateDb.db';
 
 // Defining DB Credentials
-const DB_HOST = 'localhost';
-const DB_USER = 'root';
-const DB_PASS = 'root';
-const DB_NAME = 'ultimate_db';
+const MYSQL_DB_HOST = 'localhost';
+const MYSQL_DB_USER = 'root';
+const MYSQL_DB_PASS = 'root';
+const MYSQL_DB_NAME = 'ultimate_db';
 // const DB_NAME = 'ultimate_rise';
+
+const ORACLE_DB_HOST = '';
+const ORACLE_DB_PORT = '';
+const ORACLE_DB_NAME = '';
+const ORACLE_DB_USER = '';
+const ORACLE_DB_PASS = '';
+
 
 // const DB_HOST = "sdb-70.hosting.stackcp.net";
 // const DB_USER = "rise_ims-353035334658";

@@ -12,7 +12,7 @@ class TestController extends Controller
     protected $sqlite;
 
     public function __construct() {
-        $this->sqlite = new SQLiteDatabase();
+        // $this->sqlite = new SQLiteDatabase();
     }
 
     public function index(){

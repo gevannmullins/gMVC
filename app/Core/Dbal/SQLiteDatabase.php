@@ -8,9 +8,9 @@ use PDOException;
 class SQLiteDatabase {
     protected $pdo;
 
-    public function __construct() {
+    public function __construct($sqliteDb) {
         try {
-            $this->pdo = new PDO('sqlite:' . SQLITE_DB);
+            $this->pdo = new PDO('sqlite:' . $sqliteDb);
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
             echo "Connection failed: " . $e->getMessage();

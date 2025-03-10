@@ -10,7 +10,7 @@ use app\Core\Dbal\OracleDatabase;
 
 class DatabaseModel {
     private $db;
-
+    
     public function __construct() {
         switch (DB_TYPE) {
             case 'mysql':
@@ -19,9 +19,9 @@ class DatabaseModel {
             case 'sqlite':
                 $this->db = new SQLiteDatabase(SQLITE_DB_PATH);
                 break;
-            case 'oracle':
-                $this->db = new OracleDatabase(ORACLE_DB_HOST, ORACLE_DB_PORT, ORACLE_DB_NAME, ORACLE_DB_USER, ORACLE_DB_PASS);
-                break;
+            // case 'oracle':
+            //     $this->db = new OracleDatabase(ORACLE_DB_HOST, ORACLE_DB_PORT, ORACLE_DB_NAME, ORACLE_DB_USER, ORACLE_DB_PASS);
+            //     break;
             default:
                 throw new Exception("Unsupported DB_TYPE: " . DB_TYPE);
         }
